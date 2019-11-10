@@ -1,8 +1,8 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
 const peopleContext = createContext({
   people: [],
-  addPerson: (person) => {}
-});
+  addPerson: () => {}
+}) 
 
-export default peopleContext;
+export default peopleContext

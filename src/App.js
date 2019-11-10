@@ -1,12 +1,12 @@
-import React, { useReducer } from 'react';
+import React, { useReducer } from 'react'
 
-import Form from './components/Form';
-import People from './components/People';
-import NewestPerson from './components/NewestPerson';
+import Form from './components/Form'
+import People from './components/People'
+import NewestPerson from './components/NewestPerson'
 
-import PeopleContext from './context/peopleContext';
-import peopleReducer from './context/peopleReducer';
-import { ADD_PERSON } from './context/types';
+import PeopleContext from './context/peopleContext'
+import peopleReducer from './context/peopleReducer'
+import { ADD_PERSON } from './context/types'
 
 const App = () => {
   const initialState = {
@@ -20,16 +20,16 @@ const App = () => {
         lastName: 'Doe'
       }
     ]
-  };
+  }
 
-  const [state, dispatch] = useReducer(peopleReducer, initialState);
+  const [state, dispatch] = useReducer(peopleReducer, initialState)
 
-  const addPerson = (person) => {
+  const addPerson = person => {
     dispatch({
       type: ADD_PERSON,
       payload: person
-    });
-  };
+    })
+  }
 
   return (
     <PeopleContext.Provider
@@ -46,7 +46,7 @@ const App = () => {
         </div>
       </div>
     </PeopleContext.Provider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
